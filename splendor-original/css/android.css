@@ -1,0 +1,100 @@
+/* Tablet app layout. Desktop browser styles remain available in style.css. */
+.android-app body{font-family:Roboto,"Noto Sans CJK SC",sans-serif}
+.ios-app body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}
+.ios-app button{min-height:48px}
+.ios-app .card,.ios-app .noble,.ios-app .deck{min-height:0}
+.ios-app .subtle{font-size:14px}
+.ios-app .seat input,.ios-app .seat select{min-height:48px;font-size:16px}
+.ios-app header{height:56px;padding:0 20px}
+.ios-app footer{display:none}
+.ios-app main{min-height:calc(100dvh - 56px)}
+.android-app button{min-height:48px}
+.android-app .card,.android-app .noble,.android-app .deck{min-height:0}
+.android-app .subtle{font-size:14px}
+.android-app .seat input,.android-app .seat select{min-height:48px;font-size:16px}
+.android-app header{height:56px;padding:0 20px}
+.android-app footer{display:none}
+.android-app main{min-height:calc(100dvh - 56px)}
+.android-app .setup{padding:24px 0}
+.android-app .setup-links button{font-size:14px}
+.android-app .modal-actions button{min-height:52px;font-size:16px}
+.android-app .pay-row{font-size:15px;gap:12px}
+.android-app .pay-row button{min-width:60px;min-height:48px;font-size:14px}
+.android-app dialog{width:min(740px,94vw);padding:24px;max-height:90dvh}
+.android-app .modal-card{grid-template-columns:minmax(150px,260px) minmax(0,1fr)}
+.android-app .modal-card>img{max-height:64dvh;object-fit:contain}
+.android-app .return-coins .coin{width:58px;height:58px}
+.android-app .handoff{padding:32px 16px}
+.android-app .rules-content{max-width:900px}
+.android-app .rules-content p,.android-app .rules-content li{font-size:17px}
+
+@media (min-width:900px) and (min-height:680px) and (orientation:landscape){
+ .android-app .game-active main{height:calc(100dvh - 56px);min-height:0;max-width:1800px;padding:10px 18px 12px;display:flex;flex-direction:column}
+ .android-app .table-top{flex:none;height:50px;margin:0 0 8px}
+ .android-app .table-top h1{font-size:22px;margin:3px 0}
+ .android-app .table-top .eyebrow{font-size:10px}
+ .android-app .layout{flex:1;min-height:0;grid-template-columns:minmax(0,1fr) clamp(270px,27vw,380px);gap:18px}
+ .android-app .layout>section{min-height:0;display:grid;grid-template-rows:16px 72px 16px repeat(3,minmax(0,1fr)) 156px;gap:6px}
+ .android-app .section-title{font-size:11px;letter-spacing:1px;margin:0}
+ .android-app .section-title span{font-size:11px}
+ .android-app .nobles{margin:0;gap:10px;min-height:0}
+ .android-app .noble{max-width:none;padding:5px 10px;min-height:0}
+ .android-app .noble .crown{font-size:17px;margin:0}
+ .android-app .noble .vp{font-size:24px;top:5px}
+ .android-app .noble small{display:none}
+ .android-app .noble .gem{min-width:24px;height:24px;font-size:13px}
+ .android-app .market-row{min-height:0;grid-template-columns:54px repeat(4,minmax(0,1fr));gap:10px;margin:0}
+ .android-app .market-row .card{height:100%;width:100%;max-height:none;min-height:0;aspect-ratio:auto}
+ .android-app .market-row .card img{object-fit:contain}
+ .android-app .deck{min-height:0;padding:4px;font-size:11px}
+ .android-app .deck b{font-size:25px;margin:2px}
+ .android-app .deck .diamond{display:none}
+ .android-app .deck small{font-size:10px;margin-top:5px}
+ .android-app .bank{margin:0;padding:7px 12px;min-height:0}
+ .android-app .bank>.section-title{height:17px}
+ .android-app .bank .coin{height:48px;width:48px;min-height:48px;font-size:20px}
+ .android-app .bank-coins{gap:10px}
+ .android-app .coin-wrap>span{margin-top:4px;font-size:11px}
+ .android-app .bank .take-actions{margin-top:4px;gap:10px}
+ .android-app .take-actions .subtle{font-size:11px;line-height:1.4}
+ .android-app .take-actions button{min-height:48px;padding:6px 18px;font-size:14px}
+ .android-app .sidebar{position:static;min-height:0;max-height:100%;overflow-y:auto;overscroll-behavior:contain;padding-right:4px}
+ .android-app .player{padding:10px 12px;margin-bottom:8px}
+ .android-app .player-head{font-size:15px;margin-bottom:4px}
+ .android-app .player-label{font-size:11px;margin:6px 0 4px}
+ .android-app .inventory .gem{height:26px;font-size:14px}
+ .android-app .player:not(.current) .hidden-hand{padding:6px;margin-top:7px}
+ .android-app .player:not(.current) .owned-list{margin-top:6px}
+ .android-app .sidebar-actions{flex-wrap:wrap}
+ .android-app .sidebar-actions button{font-size:12px;padding:6px;min-height:44px}
+ .android-app .log{font-size:12px;margin:12px 0}
+ .android-app .final-banner{flex:none;padding:12px;margin-bottom:8px}
+}
+@media (orientation:portrait), (max-width:899px){
+ .android-app .game-active main{padding:16px;max-width:100%}
+ .android-app .layout{grid-template-columns:1fr}
+ .android-app .sidebar{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .android-app .sidebar-bottom{grid-column:1/-1}
+ .android-app .market-row{grid-template-columns:48px repeat(4,minmax(0,1fr));gap:8px}
+ .android-app .market-row .card{max-height:none;aspect-ratio:630/880}
+ .android-app .bank{position:sticky;bottom:0;z-index:2;box-shadow:0 -6px 20px #0006}
+ .android-app .bank .coin{width:52px;height:52px}
+ .android-app .bank .take-actions button{min-height:48px}
+ .android-app .section-title span{max-width:58%;text-align:right;letter-spacing:0}
+ .android-app .setup{grid-template-columns:1fr;gap:20px}
+ .android-app .intro .art-fan{display:none}
+ .android-app .intro h1{font-size:44px}
+}
+@media(max-width:600px){
+ .android-app .brand{font-size:18px;letter-spacing:2px}
+ .android-app header{padding:0 12px}
+ .android-app nav button{font-size:12px;padding:6px;min-height:48px}
+ .android-app .game-active main{padding:12px}
+ .android-app .modal-card{grid-template-columns:120px minmax(0,1fr);gap:14px}
+ .android-app .modal-card .subtle{font-size:12px}
+ .android-app .bank .coin{width:42px;height:48px}
+ .android-app .coin-wrap>span{font-size:10px}
+ .android-app .return-coins .coin{width:48px;height:48px}
+ .android-app .nobles{gap:5px}
+ .android-app .noble{padding:6px}
+}

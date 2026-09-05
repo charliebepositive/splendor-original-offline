@@ -1,0 +1,10 @@
+**/build/
+**/.gradle/
+android/local.properties
+android/signing.properties
+*.jks
+*.keystore
+*.p12
+node_modules/
+.DS_Store
+Thumbs.db

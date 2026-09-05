@@ -14,7 +14,7 @@ node splendor-original/tools/serve.cjs
 
 ## Android APK
 
-从 [Releases](https://github.com/charliebepositive/splendor-original-offline/releases/tag/v1.0.0) 下载 `Splendor-Offline-1.0.0.apk`。安装包面向 Android 平板，重点适配联想 Y900 13 英寸 3:2 横屏，同时支持竖屏与分屏；最低 Android 8，目标 Android 16。
+从 [Releases](https://github.com/charliebepositive/splendor-original-offline/releases/tag/v1.0.0) 下载 `Splendor-Offline-1.0.0.apk`。安装包面向 Android 平板，同时支持竖屏与分屏；最低 Android 8，目标 Android 16。
 
 APK 内置全部资源，不申请 INTERNET 权限。存档写入应用私有目录，可通过系统文件选择器与 PC 版互相导入、导出 JSON。详细架构和构建说明见 `android/README.md`。
 
@@ -24,7 +24,6 @@ APK 内置全部资源，不申请 INTERNET 权限。存档写入应用私有目
 - 120 局 2–4 人完整 AI 对局规则回归通过。
 - Android release 构建、lint、签名、ZIP 对齐和包内资源检查通过。
 - 平板横屏、竖屏、分屏、异步存档和重复点击保护已通过浏览器设备模拟。
-- 尚未在 Y900 真机安装验收。
 
 运行规则测试：
 
